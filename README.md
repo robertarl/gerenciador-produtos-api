@@ -46,7 +46,6 @@ Status: `200 OK`
 
 | Campo             |  Descrição                           | Tipo    | Obrigatório? |
 |:------------------|:-------------------------------------|:--------|:-------------|
-| id                | Id do produto(Gerado automaticamente)| Long    | Sim          |
 | name              | Nome do produto                      | string  | Sim          |
 | price             | Preço do produto                     | double  | Sim          |
 
@@ -72,7 +71,6 @@ Status: `200 OK`
 
 | Campo             |  Descrição                           | Tipo    | Obrigatório? |
 |:------------------|:-------------------------------------|:--------|:-------------|
-| id                | Id do produto(Gerado automaticamente)| Long    | Sim          |
 | name              | Nome do produto                      | string  | Sim          |
 | price             | Preço do produto                     | double  | Sim          |
 
@@ -93,14 +91,6 @@ Status: `200 OK`
 | Method | Url                               |
 |:-------|:----------------------------------|
 | DELETE | http://<dominio>/api/products/id|
-
-### BODY PARAMS
-
-| Campo             |  Descrição                           | Tipo    | Obrigatório? |
-|:------------------|:-------------------------------------|:--------|:-------------|
-| id                | Id do produto(Gerado automaticamente)| Long    | Sim          |
-| name              | Nome do produto                      | string  | Sim          |
-| price             | Preço do produto                     | double  | Sim          |
 
 ### Exemplo de retorno
   
