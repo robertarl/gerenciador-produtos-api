@@ -1,15 +1,15 @@
-<h1 align="center"> Gerenciador de Produtos </h1>
+<h1> Gerenciador de Produtos </h1>
 
-<p align="center"> Este é um sistema web utilizando angular + spring boot (API)  </p>
+<p> Este é um sistema web utilizando angular + spring boot (API)  </p>
 
-<h1 align="center"> Pré-requisitos </h1>
+<h1> Pré-requisitos </h1>
 
 - Spring Boot
 - Banco de dados (utilizado: banco h2 escrito em java)
 
-<h1 align="center"> Documentação api </h1>
+<h1> Documentação api </h1>
 
-<h2 align="center"> Listar produtos </h2>
+<h2> Listar produtos </h2>
 
 | Method | Url                               |
 |:-------|:----------------------------------|
@@ -44,7 +44,7 @@ Status: `200 OK`
   
   <br>
   
-  <h2 align="center"> Criar produto </h2>
+  <h2> Criar produto </h2>
 
 | Method | Url                               |
 |:-------|:----------------------------------|
@@ -70,7 +70,7 @@ Status: `200 OK`
 }
 ```
 
-  <h2 align="center"> Editar produto </h2>
+  <h2> Editar produto </h2>
 
 | Method | Url                               |
 |:-------|:----------------------------------|
@@ -96,7 +96,7 @@ Status: `200 OK`
 }
 ```
   
-  <h2 align="center"> Excluir produto </h2>
+  <h2> Excluir produto </h2>
 
 | Method | Url                               |
 |:-------|:----------------------------------|
