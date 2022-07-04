@@ -74,7 +74,7 @@ Status: `200 OK`
 
 | Method | Url                               |
 |:-------|:----------------------------------|
-| PUT    | http://<dominio>/api/products/<id>|
+| PUT    | http://<dominio>/api/products/id|
 
 ### BODY PARAMS
 
