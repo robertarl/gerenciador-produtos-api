@@ -55,6 +55,7 @@ public class ProductController {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(code = HttpStatus.NO_CONTENT)
     void delete(@PathVariable Long id){
         productRepository.deleteById(id);
     }
