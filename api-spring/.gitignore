@@ -35,4 +35,4 @@ build/
 .vscode/
 
 ### properties ###
-!**/src/main/resources/application.properties
+/api-spring/src/main/resources/application.properties
