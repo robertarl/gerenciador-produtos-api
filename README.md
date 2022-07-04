@@ -96,5 +96,23 @@ Status: `200 OK`
 }
 ```
   
+  <h2 align="center"> Excluir produto </h2>
+
+| Method | Url                               |
+|:-------|:----------------------------------|
+| DELETE | http://<dominio>/api/products/id|
+
+### BODY PARAMS
+
+| Campo             |  Descrição                           | Tipo    | Obrigatório? |
+|:------------------|:-------------------------------------|:--------|:-------------|
+| id                | Id do produto(Gerado automaticamente)| Long    | Sim          |
+| name              | Nome do produto                      | string  | Sim          |
+| price             | Preço do produto                     | double  | Sim          |
+
+### Exemplo de retorno
+  
+  Status: `204 No Content`
+  
  
   
