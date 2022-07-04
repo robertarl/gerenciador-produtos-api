@@ -15,14 +15,6 @@
 |:-------|:----------------------------------|
 | GET    | http://<dominio>/api/products|
 
-### BODY PARAMS
-
-| Campo             |  Descrição                           | Tipo    | Obrigatório? |
-|:------------------|:-------------------------------------|:--------|:-------------|
-| id                | Id do produto(Gerado automaticamente)| Long    | Sim          |
-| name              | Nome do produto                      | string  | Sim          |
-| price             | Preço do produto                     | double  | Sim          |
-
 ### Exemplo de retorno
 
 Status: `200 OK`
