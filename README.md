@@ -9,7 +9,7 @@
 
 <h1 align="center"> Documentação api </h1>
 
-<h2 align="center"> Listar produto </h2>
+<h2 align="center"> Listar produtos </h2>
 
 | Method | Url                               |
 |:-------|:----------------------------------|
@@ -41,3 +41,60 @@ Status: `200 OK`
   }
 ]
 ```
+  
+  <br>
+  
+  <h2 align="center"> Criar produto </h2>
+
+| Method | Url                               |
+|:-------|:----------------------------------|
+| POST   | http://<dominio>/api/products|
+
+### BODY PARAMS
+
+| Campo             |  Descrição                           | Tipo    | Obrigatório? |
+|:------------------|:-------------------------------------|:--------|:-------------|
+| id                | Id do produto(Gerado automaticamente)| Long    | Sim          |
+| name              | Nome do produto                      | string  | Sim          |
+| price             | Preço do produto                     | double  | Sim          |
+
+### Exemplo de retorno
+  
+  Status: `200 OK`
+  
+  ```
+{
+  "id": 3,
+  "name": "Cabo HDMI",
+  "price": 100.0
+}
+```
+
+  <h2 align="center"> Editar produto </h2>
+
+| Method | Url                               |
+|:-------|:----------------------------------|
+| PUT    | http://<dominio>/api/products/<id>|
+
+### BODY PARAMS
+
+| Campo             |  Descrição                           | Tipo    | Obrigatório? |
+|:------------------|:-------------------------------------|:--------|:-------------|
+| id                | Id do produto(Gerado automaticamente)| Long    | Sim          |
+| name              | Nome do produto                      | string  | Sim          |
+| price             | Preço do produto                     | double  | Sim          |
+
+### Exemplo de retorno
+  
+  Status: `200 OK`
+  
+  ```
+{
+  "id": 3,
+  "name": "MousePad",
+  "price": 150.0
+}
+```
+  
+ 
+  
