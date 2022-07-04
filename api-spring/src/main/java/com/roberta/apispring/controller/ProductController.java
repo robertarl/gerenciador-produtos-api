@@ -19,11 +19,17 @@ import lombok.AllArgsConstructor;
 @RequestMapping("/api/products")
 @AllArgsConstructor
 public class ProductController {
-    
+
     private final ProductRepository productRepository;
 
     @GetMapping
-    public List<Product> listProd(){
+    public List<Product> listProd() {
         return productRepository.findAll();
+    }
+
+    @PostMapping
+    @ResponseStatus(code = HttpStatus.CREATED)
+    Product create(@RequestBody Product prod) {
+        return productRepository.save(prod);
     }
 }
