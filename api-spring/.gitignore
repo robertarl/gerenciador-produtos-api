@@ -6,7 +6,7 @@ target/
 
 
 ### properties ###
-api-spring/src/main/resources/application.properties
+/resources/application.properties
 
 
 ### STS ###
