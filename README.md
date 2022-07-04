@@ -5,7 +5,7 @@
 <h1 align="center"> Pré-requisitos </h1>
 
 - Spring Boot
-- Banco de dados (banco utilizado: banco h2 escrito em java)
+- Banco de dados (utilizado: banco h2 escrito em java)
 
 <h1 align="center"> Documentação api </h1>
 
