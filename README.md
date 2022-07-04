@@ -25,7 +25,7 @@
 
 ### Exemplo de retorno
 
-Status: `201 Created`
+Status: `200 OK`
 
 ```
 [
