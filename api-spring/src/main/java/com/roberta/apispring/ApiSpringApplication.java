@@ -15,18 +15,4 @@ public class ApiSpringApplication {
 		SpringApplication.run(ApiSpringApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner initDataBase(ProductRepository productRepository){
-		return args -> {
-			productRepository.deleteAll();
-
-			Product prod = new Product();
-			prod.setName("SSD");
-			prod.setPrice(180.00);
-
-			productRepository.save(prod);
-			
-		}; 
-	}
-
 }
