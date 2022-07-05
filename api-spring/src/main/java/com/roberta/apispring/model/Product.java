@@ -17,10 +17,10 @@ public class Product {
 
     private @Id @GeneratedValue Long id;
 
-    @Column(name= "Nome", length = 200, nullable = false)
+    @Column(name= "nome", length = 200, nullable = false)
     private String name;
 
-    @Column(name= "Preço", length = 200, nullable = false)
+    @Column(name= "preco", length = 200, nullable = false)
     private double price;
     
 }
