@@ -29,8 +29,5 @@ public class Category {
     @Column(name= "name", length = 200, nullable = false)
     private String name;
 
-    @NotBlank(message = "Description is mandatory")
-    @Column(name= "description", length=500)
-    private String description;
     
 }

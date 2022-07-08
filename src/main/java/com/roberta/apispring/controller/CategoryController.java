@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.roberta.apispring.model.Category;
 import com.roberta.apispring.repository.CategoryRepository;
-import com.roberta.apispring.repository.ProductRepository;
 
 import lombok.AllArgsConstructor;
 
@@ -46,7 +45,6 @@ public class CategoryController {
     Category update(@RequestBody Category newCategory, @PathVariable Long id) {
         return categoryRepository.findById(id).map(categories -> {
             categories.setName(newCategory.getName());
-            categories.setDescription(newCategory.getDescription());
             return categoryRepository.save(categories);
         }).orElseGet(() -> {
             newCategory.setId(id);

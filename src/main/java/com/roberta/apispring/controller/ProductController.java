@@ -28,6 +28,7 @@ public class ProductController {
 
     private  CategoryRepository categoryRepository;
 
+
     @GetMapping
     public List<Product> listProd() {
         return productRepository.findAll();
@@ -36,7 +37,7 @@ public class ProductController {
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     Product create(@RequestBody Product prod) {
-       
+    
         return productRepository.save(prod);
         
     }
