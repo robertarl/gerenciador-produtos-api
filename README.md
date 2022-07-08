@@ -23,14 +23,28 @@ Status: `200 OK`
 [
   {
     "id": 1,
-    "name": "SSD",
-    "price": 180.0
-  },
-  {
+    "name": "Produto Exemplo 1",
+    "category": {
+        "id": 1,
+        "name": "Categoria Exemplo 1",
+        "hibernateLazyInitializer": {}
+    },
+    "price": 3149.1,
+    "quantity": 30,
+    "description": "Descrição Exemplo 1 "
+},
+{
     "id": 2,
-    "name": "Tv",
-    "price": 1200.0
-  }
+    "name": "Produto Exemplo 2",
+    "category": {
+        "id": 1,
+        "name": "Categoria Exemplo 2",
+        "hibernateLazyInitializer": {}
+    },
+    "price": 3149.1,
+    "quantity": 30,
+    "description": "Descrição Exemplo 2"
+}
 ]
 ```
   
@@ -48,6 +62,9 @@ Status: `200 OK`
 |:------------------|:-------------------------------------|:--------|:-------------|
 | name              | Nome do produto                      | string  | Sim          |
 | price             | Preço do produto                     | double  | Sim          |
+| quantity          | Quantidade de produtos disponíveis   | int     | Sim          |
+| description       | Descrição do produto                 | string  | Sim          |
+| categoryId        | Preço do produto                     | int     | Sim          |
 
 ### Exemplo de retorno
   
@@ -55,9 +72,16 @@ Status: `200 OK`
   
   ```
 {
-  "id": 3,
-  "name": "Cabo HDMI",
-  "price": 100.0
+    "id": 6,
+    "name": "Produto Exemplo",
+    "category": {
+        "id": 1,
+        "name": "Categoria Exemplo",
+        "hibernateLazyInitializer": {}
+    },
+    "price": 3149.1,
+    "quantity": 30,
+    "description": "Descrição Exemplo "
 }
 ```
 
@@ -73,6 +97,9 @@ Status: `200 OK`
 |:------------------|:-------------------------------------|:--------|:-------------|
 | name              | Nome do produto                      | string  | Sim          |
 | price             | Preço do produto                     | double  | Sim          |
+| quantity          | Quantidade de produtos disponíveis   | int     | Sim          |
+| description       | Descrição do produto                 | string  | Sim          |
+| categoryId        | Preço do produto                     | int     | Sim          |
 
 ### Exemplo de retorno
   
@@ -80,9 +107,16 @@ Status: `200 OK`
   
   ```
 {
-  "id": 3,
-  "name": "MousePad",
-  "price": 150.0
+    "id": 6,
+    "name": "Produto Exemplo",
+    "category": {
+        "id": 1,
+        "name": "Categoria Exemplo",
+        "hibernateLazyInitializer": {}
+    },
+    "price": 3149.1,
+    "quantity": 30,
+    "description": "Descrição Exemplo "
 }
 ```
   
