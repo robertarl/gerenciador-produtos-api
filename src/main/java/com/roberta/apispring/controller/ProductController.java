@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.roberta.apispring.model.Product;
+import com.roberta.apispring.repository.CategoryRepository;
 import com.roberta.apispring.repository.ProductRepository;
 
 import lombok.AllArgsConstructor;
@@ -25,6 +26,8 @@ public class ProductController {
 
     private final ProductRepository productRepository;
 
+    private  CategoryRepository categoryRepository;
+
     @GetMapping
     public List<Product> listProd() {
         return productRepository.findAll();
@@ -33,7 +36,9 @@ public class ProductController {
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     Product create(@RequestBody Product prod) {
+       
         return productRepository.save(prod);
+        
     }
 
     @GetMapping({"/{id}"})
