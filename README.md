@@ -13,7 +13,7 @@
 
 | Method | Url                               |
 |:-------|:----------------------------------|
-| GET    | http://<dominio>/api/products|
+| GET    | http://[dominio]/api/products|
 
 ### Exemplo de retorno
 
@@ -54,7 +54,7 @@ Status: `200 OK`
 
 | Method | Url                               |
 |:-------|:----------------------------------|
-| POST   | http://<dominio>/api/products|
+| POST   | http://[dominio]/api/products|
 
 ### BODY PARAMS
 
@@ -89,7 +89,7 @@ Status: `200 OK`
 
 | Method | Url                               |
 |:-------|:----------------------------------|
-| PUT    | http://<dominio>/api/products/id|
+| PUT    | http://[dominio]/api/products/id|
 
 ### BODY PARAMS
 
@@ -124,7 +124,7 @@ Status: `200 OK`
 
 | Method | Url                               |
 |:-------|:----------------------------------|
-| DELETE | http://<dominio>/api/products/id|
+| DELETE | http://[dominio]/api/products/id|
 
 ### Exemplo de retorno
   
@@ -135,7 +135,7 @@ Status: `200 OK`
 
 | Method | Url                               |
 |:-------|:----------------------------------|
-| GET    | http://<dominio>/api/categories|
+| GET    | http://[dominio]/api/categories|
 
 ### Exemplo de retorno
 
@@ -160,7 +160,7 @@ Status: `200 OK`
 
 | Method | Url                               |
 |:-------|:----------------------------------|
-| POST   | http://<dominio>/api/categories|
+| POST   | http://[dominio]/api/categories|
 
 ### BODY PARAMS
 
@@ -183,7 +183,7 @@ Status: `200 OK`
 
 | Method | Url                               |
 |:-------|:----------------------------------|
-| PUT    | http://<dominio>/api/categories/id|
+| PUT    | http://[dominio]/api/categories/id|
 
 ### BODY PARAMS
 
@@ -206,7 +206,7 @@ Status: `200 OK`
 
 | Method | Url                               |
 |:-------|:----------------------------------|
-| DELETE | http://<dominio>/api/categories/id|
+| DELETE | http://[dominio]/api/categories/id|
 
 ### Exemplo de retorno
   
