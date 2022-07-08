@@ -131,4 +131,85 @@ Status: `200 OK`
   Status: `204 No Content`
   
  
+<h2> Listar Categorias </h2>
+
+| Method | Url                               |
+|:-------|:----------------------------------|
+| GET    | http://<dominio>/api/categories|
+
+### Exemplo de retorno
+
+Status: `200 OK`
+
+```
+[
+  {
+    "id": 1,
+    "name": "Categoria Exemplo 1"
+},
+{
+    "id": 2,
+    "name": "Categoria Exemplo 2"
+}
+]
+```
+  
+  <br>
+  
+  <h2> Criar Categoria </h2>
+
+| Method | Url                               |
+|:-------|:----------------------------------|
+| POST   | http://<dominio>/api/categories|
+
+### BODY PARAMS
+
+| Campo             |  Descrição                           | Tipo    | Obrigatório? |
+|:------------------|:-------------------------------------|:--------|:-------------|
+| name              | Nome do produto                      | string  | Sim          |
+
+### Exemplo de retorno
+  
+  Status: `200 OK`
+  
+  ```
+{
+    "id": 6,
+    "name": "Categoria Exemplo",
+}
+```
+
+  <h2> Editar Categoria </h2>
+
+| Method | Url                               |
+|:-------|:----------------------------------|
+| PUT    | http://<dominio>/api/categories/id|
+
+### BODY PARAMS
+
+| Campo             |  Descrição                           | Tipo    | Obrigatório? |
+|:------------------|:-------------------------------------|:--------|:-------------|
+| name              | Nome do produto                      | string  | Sim          |
+
+### Exemplo de retorno
+  
+  Status: `200 OK`
+  
+  ```
+{
+    "id": 6,
+    "name": "Categoria Exemplo Editada",
+}
+```
+  
+  <h2> Excluir Categoria </h2>
+
+| Method | Url                               |
+|:-------|:----------------------------------|
+| DELETE | http://<dominio>/api/categories/id|
+
+### Exemplo de retorno
+  
+  Status: `204 No Content`
+  
   
