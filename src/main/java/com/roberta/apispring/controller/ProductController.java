@@ -2,6 +2,9 @@ package com.roberta.apispring.controller;
 
 import java.util.List;
 
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.roberta.apispring.dto.ProductDTO;
 
 import com.roberta.apispring.model.Product;
 import com.roberta.apispring.repository.CategoryRepository;
@@ -28,6 +33,14 @@ public class ProductController {
 
     private  CategoryRepository categoryRepository;
 
+    @Autowired
+    private ModelMapper modelMapper;
+
+    private Product convertToEntity(ProductDTO productDTO){
+        Product product = modelMapper.map(productDTO , Product.class);
+        return product;
+    }
+
 
     @GetMapping
     public List<Product> listProd() {
@@ -36,10 +49,8 @@ public class ProductController {
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    Product create(@RequestBody Product prod) {
-    
-        return productRepository.save(prod);
-        
+    Product create(@RequestBody ProductDTO productDTO) {
+        return productRepository.save(convertToEntity(productDTO));
     }
 
     @GetMapping({"/{id}"})
