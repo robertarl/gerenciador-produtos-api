@@ -166,7 +166,7 @@ Status: `200 OK`
 
 | Campo             |  Descrição                           | Tipo    | Obrigatório? |
 |:------------------|:-------------------------------------|:--------|:-------------|
-| name              | Nome do produto                      | string  | Sim          |
+| name              | Nome da categoria                    | string  | Sim          |
 
 ### Exemplo de retorno
   
@@ -189,7 +189,7 @@ Status: `200 OK`
 
 | Campo             |  Descrição                           | Tipo    | Obrigatório? |
 |:------------------|:-------------------------------------|:--------|:-------------|
-| name              | Nome do produto                      | string  | Sim          |
+| name              | Nome da categoria                    | string  | Sim          |
 
 ### Exemplo de retorno
   
