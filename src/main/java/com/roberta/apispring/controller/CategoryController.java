@@ -13,55 +13,50 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.roberta.apispring.model.Product;
+import com.roberta.apispring.model.Category;
 import com.roberta.apispring.repository.CategoryRepository;
 import com.roberta.apispring.repository.ProductRepository;
 
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/api/categories")
 @AllArgsConstructor
-public class ProductController {
+public class CategoryController {
 
-    private final ProductRepository productRepository;
-
-    private  CategoryRepository categoryRepository;
+    private final CategoryRepository categoryRepository;
 
     @GetMapping
-    public List<Product> listProd() {
-        return productRepository.findAll();
+    public List<Category> categories() {
+        return categoryRepository.findAll();
     }
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    Product create(@RequestBody Product prod) {
-       
-        return productRepository.save(prod);
-        
+    Category create(@RequestBody Category categories) {
+        return categoryRepository.save(categories);
     }
 
-    @GetMapping({"/{id}"})
-    Product edit(@PathVariable Long id){
-        return productRepository.findById(id).orElseThrow(() -> new ProductNotFoundException(id));
+    @GetMapping({ "/{id}" })
+    Category edit(@PathVariable Long id) {
+        return categoryRepository.findById(id).orElseThrow(() -> new CategoryNotFoundException(id));
     }
 
     @PutMapping("/{id}")
-    Product update(@RequestBody Product newProduct, @PathVariable Long id){
-
-        return productRepository.findById(id)
-        .map(prod -> {
-            prod.setName(newProduct.getName());
-            prod.setPrice(newProduct.getPrice());
-            return productRepository.save(prod);}).orElseGet(() -> {
-                newProduct.setId(id);
-                return productRepository.save(newProduct);
-              });
+    Category update(@RequestBody Category newCategory, @PathVariable Long id) {
+        return categoryRepository.findById(id).map(categories -> {
+            categories.setName(newCategory.getName());
+            categories.setDescription(newCategory.getDescription());
+            return categoryRepository.save(categories);
+        }).orElseGet(() -> {
+            newCategory.setId(id);
+            return categoryRepository.save(newCategory);
+        });
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     void delete(@PathVariable Long id){
-        productRepository.deleteById(id);
+        categoryRepository.deleteById(id);
     }
 }
