@@ -64,7 +64,7 @@ Status: `200 OK`
 | price             | Preço do produto                     | double  | Sim          |
 | quantity          | Quantidade de produtos disponíveis   | int     | Sim          |
 | description       | Descrição do produto                 | string  | Sim          |
-| categoryId        | Preço do produto                     | int     | Sim          |
+| categoryId        | Id da Categoria do produto           | int     | Sim          |
 
 ### Exemplo de retorno
   
@@ -99,7 +99,7 @@ Status: `200 OK`
 | price             | Preço do produto                     | double  | Sim          |
 | quantity          | Quantidade de produtos disponíveis   | int     | Sim          |
 | description       | Descrição do produto                 | string  | Sim          |
-| categoryId        | Preço do produto                     | int     | Sim          |
+| categoryId        | Id da categoria do produto           | int     | Sim          |
 
 ### Exemplo de retorno
   
